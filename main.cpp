@@ -7,6 +7,8 @@
 int main(){
 
     initialize();
+    std::cout << getAndIncrease() << std::endl;
+    std::cout << id << std::endl;
 
     return 0;
 }
