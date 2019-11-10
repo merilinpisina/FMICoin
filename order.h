@@ -1,23 +1,21 @@
-#ifndef ORDER_H
-#define ORDER_H
+#ifndef ORDER_DATA
+#define ORDER_DATA
 
-class Order
+enum OrderType { SELL, BUY };
+
+class OrderData
 {
-private:
-    /* data */
 public:
-    Order(/* args */);
-    ~Order();
+    OrderData();
+    ~OrderData();
+
+private:
+    struct order {
+    OrderType type;
+    unsigned walletId;
+    double fmiCoins;
+    }* data;
+    unsigned int size, capacity;
 };
-
-Order::Order(/* args */)
-{
-}
-
-Order::~Order()
-{
-}
-
-
 
 #endif

@@ -1,7 +1,7 @@
 #ifndef FMICOINS
 #define FMICOINS
 
-#include "wallet.h"
+#include "wallet_data.h"
 #include "transactions.h"
 #include "order.h"
 
@@ -12,9 +12,9 @@ public:
     explicit Data();
 
 private:
-    Wallet *wallets;
-    Transaction *transactions;
-    Order *orders;
+    WalletData wallets;
+    TransactionData transactions;
+    OrderData orders;
 };
 
 #endif

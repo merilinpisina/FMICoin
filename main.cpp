@@ -1,5 +1,4 @@
-#include "id.h"
-
+#include "wallet.h"
 // add_wallet(...)
 // convertTo(currency,amount)
 //
@@ -7,9 +6,15 @@
 int main(){
 
     initialize();
+    std::cout<<id<<std::endl;
+    std::cout << "\n";
     std::cout << getAndIncrease() << std::endl;
     std::cout << id << std::endl;
 
+    char name[100];
+    strcpy(name, ("name"));
+    Wallet test(1234,name);
+    test.print();
     return 0;
 }
 /*

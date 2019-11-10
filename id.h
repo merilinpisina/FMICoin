@@ -16,22 +16,28 @@ void initialize() {
     // File should be config.dat
     uid.open("uid.dat");
     if (!uid) {
+        std::cout << "Not opened\n";
         //handle it
     }
     else {
         std::string line;
         std::getline(uid,line);
-        //std::cout << line << std::endl;
 
         std::stringstream value(line);
+        value.clear();
+        if (!value)
+        {
+            std::cout << "Not opened\n";
+        }
+        
         value >> id;
-
         uid.close();
     }
 }
 
 unsigned int getAndIncrease() {
-    return id++;
+    // but this does not work -  the last number is wrong
+    return (id == system_id ? ++id : id++);
 }
 
 #endif
